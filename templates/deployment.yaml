@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        image: {{ default "nginx" .Values.image.repository }}:{{ .Values.image.tag }}
         ports:
           - name: http
             containerPort: 80
