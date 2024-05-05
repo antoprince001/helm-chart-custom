@@ -1,11 +1,20 @@
-helm create nginx-chart #create
+# Helm Chart Custom
 
-helm install hello-world-1 ./helm-charts-custom
+Helm chart implementation for nginx to learn writing own helm chart
 
-kubectl get deployment
+## Helm Commands
 
-helm lint ./helm-charts-custom
+### Command to create chart template project
+```helm create nginx-chart```
 
-helm template ./helm-charts-custom
+### Create a release from the chart template
+```helm install hello-world-1 ./helm-charts-custom```
 
-helm install hello-world-1 ./helm-charts-custom --dry-run
+### Examine a chart for possible issues
+```helm lint ./helm-charts-custom```
+
+### Locally render chart templates
+```helm template ./helm-charts-custom```
+
+### Dry run locally to test how chart release will be
+```helm install hello-world-1 ./helm-charts-custom --dry-run```
